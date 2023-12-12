@@ -3,10 +3,14 @@
 }
 
 body{
-    padding: 3rem 1.5rem;
+    padding: 8rem 1.5rem;
     margin:0;
     background: hsl(195,75%,39%);
     font-family: "Kumbh Sans";
+    /*background-image: url("images/bg-pattern-top.svg"),
+    url("images/bg-pattern-bottom.svg");
+    background-position: 0 -500px, 0 250px;
+    background-repeat: no-repeat;*/
 }
 
 h1,h2,p{
@@ -23,6 +27,7 @@ main{
     border-radius:1rem;
     overflow: hidden;
     text-align: center;
+    margin: 0 auto;
 }
 
 article{
@@ -40,6 +45,7 @@ article div{
 h2{
     font-size: 1rem;
     font-weight: normal;
+    margin-top: .5rem;
 }
 
 span,h2{
@@ -70,4 +76,40 @@ article span{
 h1 span{
     font-weight: normal;
     margin-left: .5rem;
+}
+
+.circles{
+    width: 60%;
+    position: fixed;
+    z-index: -10;
+}
+
+.circles img{
+    width: 100%;
+}
+
+.top-circle{
+    top:0;
+    left:0;
+    transform: translate(-20%,-50%);
+}
+
+.bottom-circle{
+    bottom:0;
+    right:0;
+    transform: translate(20%,60%);
+}
+
+@media screen and (max-width:615px) {
+    .top-circle{
+        transform: translate(-65%,-50%);
+    }
+
+    .circles{
+        width: 150%;
+    }
+
+    .bottom-circle{
+        transform: translate(65%,45%);
+    }
 }
